@@ -1,0 +1,33 @@
+[alias]
+  st = status
+  br = branch
+  df = diff
+  co = checkout
+  ci = commit
+  ec = config --global -e
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  cob = checkout -b
+  cm = !git add -A && git commit -m
+  save = !git add -A && git commit -m 'SAVEPOINT'
+
+  empty = !git commit --allow-empty -m 'REPLACEME [ci skip]'
+  lol = "log --pretty=oneline --abbrev-commit --graph --decorate"
+  wip = !git add -u && git commit -m 'WIP [ci skip]'
+  undo = reset HEAD~1 --mixed
+  amend = commit -a --amend
+
+[user]
+	email = chris@platformthirteen.com
+	name = Chris Butler
+
+[core]
+	excludesfile = /Users/CButler/.gitignore_global
+
+[push]
+	default = simple
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
