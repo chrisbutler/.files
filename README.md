@@ -21,6 +21,8 @@ Install [powerline](https://github.com/powerline/fonts) font pack and set up [bu
   omf theme budspencer
 ```
 
+_Set [iTerm font to Powerline version](https://github.com/powerline/fonts/issues/44#issuecomment-300643099)_
+
 Create `aliases.fish` file in `~/.config/fish/` to define custom aliases
 
 Finally, in `~/.config/fish/config.fish`:
