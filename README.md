@@ -19,6 +19,7 @@ Install [powerline](https://github.com/powerline/fonts) font pack and set up [bu
   brew install --with-default-names gnu-sed
   brew install coreutils
   omf theme budspencer
+  set budspencer_colors 000000 333333 666666 ffffff 2981c3 186ecc ff007d d81abe ff6600 da7f1c 29e4c5 18de74
 ```
 
 _Set [iTerm font to Powerline version](https://github.com/powerline/fonts/issues/44#issuecomment-300643099)_
