@@ -33,3 +33,7 @@ Finally, in `~/.config/fish/config.fish`:
   status --is-interactive; and source (rbenv init -|psub) # automatically source rbenv
   set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH # use expr from coreutils
 ```
+
+### Git
+
+Make `HEAD` case insensitive: `git symbolic-ref head HEAD`
