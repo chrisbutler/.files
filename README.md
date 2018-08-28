@@ -32,6 +32,7 @@ Finally, in `~/.config/fish/config.fish`:
   . ~/.config/fish/aliases.fish # load aliases file
   status --is-interactive; and source (rbenv init -|psub) # automatically source rbenv
   set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH # use expr from coreutils
+  set -e bookmarks # https://github.com/oh-my-fish/theme-budspencer/issues/31
 ```
 
 ### Git
