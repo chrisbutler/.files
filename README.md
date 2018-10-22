@@ -20,6 +20,7 @@ Install [powerline](https://github.com/powerline/fonts) font pack and set up [bu
   brew install coreutils
   omf theme budspencer
   set budspencer_colors 000000 333333 666666 ffffff 2981c3 186ecc ff007d d81abe ff6600 da7f1c 29e4c5 18de74
+  set -U budspencer_nogreeting
 ```
 
 _Set [iTerm font to Powerline version](https://github.com/powerline/fonts/issues/44#issuecomment-300643099)_
@@ -34,7 +35,3 @@ Finally, in `~/.config/fish/config.fish`:
   set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH # use expr from coreutils
   set -e bookmarks # https://github.com/oh-my-fish/theme-budspencer/issues/31
 ```
-
-### Git
-
-Make `HEAD` case insensitive: `git symbolic-ref head HEAD`
