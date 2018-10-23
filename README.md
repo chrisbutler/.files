@@ -35,3 +35,7 @@ Finally, in `~/.config/fish/config.fish`:
   set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH # use expr from coreutils
   set -e bookmarks # https://github.com/oh-my-fish/theme-budspencer/issues/31
 ```
+
+### Karabiner
+
+Put `arrows.json` in `.config/karabiner/assets/complex_modifications/`
