@@ -15,12 +15,13 @@ _NOTE: Fish is [not compatible with nvm](https://github.com/creationix/nvm/issue
 Install [powerline](https://github.com/powerline/fonts) font pack and set up [budspencer](https://github.com/oh-my-fish/theme-budspencer) theme:
 
 ```sh
-  omf install budspencer
   brew install --with-default-names gnu-sed
   brew install coreutils
+  omf install budspencer
   omf theme budspencer
   set budspencer_colors 000000 333333 666666 ffffff 2981c3 186ecc ff007d d81abe ff6600 da7f1c 29e4c5 18de74
   set -U budspencer_nogreeting
+  set -U budspencer_no_cd_bookmark # https://github.com/oh-my-fish/theme-budspencer/issues/31
 ```
 
 _Set [iTerm font to Powerline version](https://github.com/powerline/fonts/issues/44#issuecomment-300643099)_
@@ -32,8 +33,11 @@ Finally, in `~/.config/fish/config.fish`:
 ```sh
   . ~/.config/fish/aliases.fish # load aliases file
   status --is-interactive; and source (rbenv init -|psub) # automatically source rbenv
-  set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH # use expr from coreutils
-  set -e bookmarks # https://github.com/oh-my-fish/theme-budspencer/issues/31
+
+  if test (uname -s) = "Darwin"
+    set -gx PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+    set -gx PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
+  end
 ```
 
 ### Karabiner
