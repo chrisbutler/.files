@@ -1,3 +1,6 @@
+[user]
+  name = Chris Butler
+
 [alias]
   st = status
   br = branch
@@ -15,19 +18,10 @@
   wip = !git add -u && git commit -m 'WIP [ci skip]'
   undo = reset HEAD~1 --mixed
   amend = commit -a --amend
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+  bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+  hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
 
-[user]
-	email = chris@platformthirteen.com
-	name = Chris Butler
-
-[core]
-	excludesfile = /Users/CButler/.gitignore_global
-
-[push]
-	default = simple
-
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+[rebase]
+	autosquash = true
