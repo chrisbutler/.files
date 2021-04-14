@@ -2,21 +2,20 @@
 
 ### Fish
 
-Install [Fishshell](https://fishshell.com/) and [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
+Install [Fishshell](https://fishshell.com/), [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish), and [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```sh
   brew install fish
   echo /usr/local/bin/fish | sudo tee -a /etc/shells # add to list of shells
   chsh -s /usr/local/bin/fish # make default
   curl -L https://get.oh-my.fish | fish
+  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
-_NOTE: Fish is [not compatible with nvm](https://github.com/creationix/nvm/issues/303)_
 
-Install [powerline](https://github.com/powerline/fonts) font pack and set up [budspencer](https://github.com/oh-my-fish/theme-budspencer) theme:
+Install [powerline](https://github.com/powerline/fonts) fonts,  and set up [budspencer](https://github.com/oh-my-fish/theme-budspencer) theme:
 
 ```sh
-  brew install --with-default-names gnu-sed
-  brew install coreutils
+  brew install coreutils gnu-sed
   omf install budspencer
   omf theme budspencer
   set budspencer_colors 000000 333333 666666 ffffff 2981c3 186ecc ff007d d81abe ff6600 da7f1c 29e4c5 18de74
